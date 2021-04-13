@@ -3,8 +3,12 @@
 2. 최종 형태를 "" 과 1로 변환을 하도록 요구 -> replaceAll (replace에서 기억이 안나서 검색해봤다)
 3. 빈 자릿수를 채우기 위해 겹쳐진 수의 2진수 길이가 짧으면 ? -> 차이만큼 0을 붙여주자 
 
+2021-04-14 수정
+난 or연산을 별개로 진행한 뒤 replaceAll을 해주었지만
+다른 사람이 한 소스를 보니까 Integer.toBinaryString(arr[i]|arr2[i])이 가능하다는 것을 알았다
 
-
+인상깊은 소스로는 answer배열의 크기만큼 for문을 돌려서
+or연산과, 위치를 잡아주고, replaceAll 까지 한꺼번에 수행하여 소스를 줄이는 것이 있다
 */
 public String[] solution(int n, int[] arr1, int[] arr2) {
         int[] map = new int[n];                    //arr1와 arr2를 합친(or연산을 하게 될) 맵
